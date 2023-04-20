@@ -6,10 +6,15 @@ const dateEl = document.getElementById('date-picker');
 const today = new Date().toISOString().split('T')[0];
 dateEl.setAttribute('min', today);
 
+let countdownTitle = '';
+let countdownDate = '';
+
 // Takes Values From Form Input
 function updateCountdown(e) {
     e.preventDefault();
-    console.log(e);
+    countdownTitle = e.srcElement[0].value;
+    countdownDate = e.srcElement[1].value;
+    console.log(countdownTitle, countdownDate);
 }
 
 // Event Listeners
