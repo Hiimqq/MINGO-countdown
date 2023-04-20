@@ -8,6 +8,7 @@ dateEl.setAttribute('min', today);
 
 let countdownTitle = '';
 let countdownDate = '';
+let countdownValue = Date;
 
 // Takes Values From Form Input
 function updateCountdown(e) {
@@ -15,6 +16,9 @@ function updateCountdown(e) {
     countdownTitle = e.srcElement[0].value;
     countdownDate = e.srcElement[1].value;
     console.log(countdownTitle, countdownDate);
+    //Get number version of current date to update DOM
+    countdownValue = new Date(countdownDate).getTime();
+    console.log('countdown value', countdownValue);
 }
 
 // Event Listeners
