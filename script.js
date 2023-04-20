@@ -18,7 +18,7 @@ dateEl.setAttribute('min', today);
 
 let countdownTitle = '';
 let countdownDate = '';
-let countdownValue = Date;
+let countdownValue = new Date();
 let countdownActive;
 let savedCountdown;
 
